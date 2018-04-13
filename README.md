@@ -1,6 +1,6 @@
 # GoMobiler
 
-A stripped-down modified `gomobile` to easily build go executables for Android.
+A stripped-down modified [gomobile](https://github.com/golang/mobile) to easily build `go` binaries for Android.
 
 Instead of generating an APK, `gomobiler` simply builds binaries for all applicable architectures and saves them in the format:
 ```
