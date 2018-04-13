@@ -2,7 +2,7 @@
 
 echo Build started...
 
-cd src
+cd gomobiler
 go build -o ../gomobiler.exe
 
 echo Done!

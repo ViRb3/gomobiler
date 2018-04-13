@@ -9,7 +9,6 @@ Instead of generating an APK, `gomobiler` simply builds binaries for all applica
 
 ## Usage
 1. `gomobiler init -ndk "/path/to/sdk/ndk-bundle/"`
-2. Go to your project's directory
-3. `gomobiler build`
+2. In your project's directory: `gomobiler build`
 
 You can specify an output directory using the `-o` flag
