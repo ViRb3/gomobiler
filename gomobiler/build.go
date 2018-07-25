@@ -94,7 +94,6 @@ func runBuild(cmd *command) (err error) {
 		return fmt.Errorf("cannot set -o when building non-main package")
 	}
 
-	var nmpkgs map[string]bool
 	switch targetOS {
 	case "android":
 		if pkg.Name != "main" {
@@ -106,14 +105,10 @@ func runBuild(cmd *command) (err error) {
 			}
 			return nil
 		}
-		nmpkgs, err = goAndroidBuild(pkg, targetArchs)
+		_, err = goAndroidBuild(pkg, targetArchs)
 		if err != nil {
 			return err
 		}
-	}
-
-	if !nmpkgs["golang.org/x/mobile/app"] {
-		return fmt.Errorf(`%s does not import "golang.org/x/mobile/app"`, pkg.ImportPath)
 	}
 
 	return nil
